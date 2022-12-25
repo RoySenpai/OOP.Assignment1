@@ -8,9 +8,12 @@ public class GroupAdmin implements Sender{
 
     @Override
     public void register(Member obj) {
-        this.membersList.add(obj);
-        System.out.println("Added member.");
-        notifyMembers();
+        if (!membersList.contains(obj))
+        {
+            this.membersList.add(obj);
+            obj.update(usb);
+            System.out.println("Added member.");
+        }
     }
 
     @Override
@@ -40,11 +43,6 @@ public class GroupAdmin implements Sender{
     @Override
     public void undo() {
         this.usb.undo();
-    }
-
-    private void notifyMembers() {
-        for (Member m: this.membersList)
-            m.update(this.usb);
     }
 
     @Override
