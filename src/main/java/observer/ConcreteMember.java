@@ -12,6 +12,7 @@ public class ConcreteMember implements Member{
     @Override
     public void update(UndoableStringBuilder usb) {
         this.currentString = usb;
+        System.out.println(this.name + " notified.");
     }
 
     public String toString() {

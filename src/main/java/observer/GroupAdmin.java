@@ -11,7 +11,6 @@ public class GroupAdmin implements Sender{
         if (!membersList.contains(obj))
         {
             this.membersList.add(obj);
-            obj.update(usb);
             System.out.println("Added member.");
         }
     }
@@ -28,21 +27,30 @@ public class GroupAdmin implements Sender{
     @Override
     public void insert(int offset, String obj) {
         this.usb.insert(offset, obj);
+        notifyMembers();
     }
 
     @Override
     public void append(String obj) {
         this.usb.append(obj);
+        notifyMembers();
     }
 
     @Override
     public void delete(int start, int end) {
         this.usb.delete(start, end);
+        notifyMembers();
     }
 
     @Override
     public void undo() {
         this.usb.undo();
+        notifyMembers();
+    }
+
+    private void notifyMembers() {
+        for (Member m: this.membersList)
+            m.update(this.usb);
     }
 
     @Override
