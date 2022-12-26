@@ -6,6 +6,13 @@ public class GroupAdmin implements Sender{
     private UndoableStringBuilder usb = new UndoableStringBuilder();
     private ArrayList<Member> membersList = new ArrayList<>();
 
+    /**
+     *
+     * Register a member to the observers list.
+     *
+     * @param obj Member object pointer
+     *
+     */
     @Override
     public void register(Member obj) {
         if (!membersList.contains(obj))
@@ -15,6 +22,13 @@ public class GroupAdmin implements Sender{
         }
     }
 
+    /**
+     *
+     * Unregister a member from the observers list.
+     *
+     * @param obj Member object pointer
+     *
+     */
     @Override
     public void unregister(Member obj) {
         if (membersList.contains(obj))
