@@ -44,7 +44,7 @@ public class GroupAdmin implements Sender{
      * Also notifies that a change has been made.
      *
      * @param offset  the offset
-     * @param str  a string
+     * @param obj  the string
      *
      */
     @Override
