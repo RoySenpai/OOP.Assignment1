@@ -10,10 +10,10 @@ and how we can use it in our programs.
 
 The program we build uses the UndoableStringBuilder class we used
 in Ex0, which extends the features of the StringBuilder class to
-support the undo function which undo the recent change that made
+support the undo function which undo the recent change that was made
 to the object using a stack.
 
-In the Ex we have two interfaces which are used for the observer
+In the assignment we have two interfaces which are used for the observer
 design-pattern: Member, which is our observer interface and Sender
 which is our observable (or subject) interface.
 
@@ -21,7 +21,7 @@ which is our observable (or subject) interface.
 The ConcreteMember class implements the Member interface, and is
 our observer. Each ConcreteMember object holds a name and an
 UndoableStringBuilder object reference. Once a ConcreteMember object
-has been registered to a GroupAdmin object, everytime the GroupAdmin
+has been registered to a GroupAdmin object, everytime, the GroupAdmin
 object sends an update, it will update its own UndoableStringBuilder
 pointer reference to the GroupAdmin's UndoableStringBuilder object,
 which means that we use a shallow copy instead of a deep copy. The
@@ -48,7 +48,7 @@ In this class, we tested all the UndoableStringBuilder functionality.
 This class is a copy of the class we made for Ex0.
 
 ### ConcreteMemberTest
-In this class we'd tested the functionality of the update method
+In this class, we'd tested the functionality of the update method
 of the ConcreteMember class.
 
 ### GroupAdminTest
@@ -57,6 +57,6 @@ different situations including passing an already registered member,
 checking exceptions with the UndoableStringBuilder, etc.
 
 ### JvmUtilities tests (Tests.java)
-In this class we'd tested how our objects interact with
+In this class, we'd tested how our objects interact with
 the main memory and how efficient there are. We've used the JvmUtilities
 class and put all those tests in the Tests.java file.
