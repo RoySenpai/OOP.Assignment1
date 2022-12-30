@@ -40,23 +40,21 @@ a change has been made, and it will pass down a reference to its own
 UndoableStringBuilder object. The GroupAdmin object support those actions
 on its own UndoableStringBuilder object: insert, append, delete and undo.
 
-## Tests
+## JvmUtilities tests (Tests.java)
 All the tests were made with the help of JUnit 5.
 
-### UndoableStringBuilderTest
-In this class, we tested all the UndoableStringBuilder functionality.
-This class is a copy of the class we made for Ex0.
-
-### ConcreteMemberTest
-In this class, we'd tested the functionality of the update method
-of the ConcreteMember class.
-
-### GroupAdminTest
-This class tests the GroupAdmin class abilities and how it can handle
-different situations including passing an already registered member,
-checking exceptions with the UndoableStringBuilder, etc.
-
-### JvmUtilities tests (Tests.java)
 In this class, we'd tested how our objects interact with
 the main memory and how efficient there are. We've used the JvmUtilities
 class and put all those tests in the Tests.java file.
+
+## Running
+To run the Ex, you must have JDK & Maven installed.
+
+Clone the repository using the follow command:
+```
+git clone https://github.com/RoySenpai/OOP.Assignment1
+```
+
+Then, open the project via IntelliJ and select build -> Rebuild project.
+Let the project be rebuilt, and then you can run the Tests.java class to
+see the functionality of the project.
